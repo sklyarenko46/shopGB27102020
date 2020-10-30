@@ -50,6 +50,8 @@ body {
             border-radius: 3px 0px 0px 3px;
             overflow: hidden;
             box-sizing: border-box;
+            margin-right: 320px;
+            margin-left: 37px;
             .browse {
                 width: 90px;
                 height: inherit;
@@ -94,6 +96,11 @@ body {
                     border: none;
                     border-left: 1px solid $colour-e6e6e6;
                     box-sizing: border-box;
+                    &:hover {
+                        cursor: pointer;
+                        background-color: #f16d7f;
+                        color: white;
+                    }
                 }
             }
         }
