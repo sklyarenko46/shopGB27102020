@@ -104,12 +104,17 @@ body {
                 }
             }
         }
-        .cart-img {
+        .shopping-cart-link {
+            background-image: url(../images/cart.png);
+            background-repeat: no-repeat;
+            background-size: $cart-img-width;
+            background-position: center;
             width: $cart-img-width;
             height: $cart-img-height;
             margin-left: $cart-img-margin-left;
             margin-right: $cart-img-margin-right;
             &:hover {
+                background-size: $cart-img-width + $cart-img-increase;
                 width: $cart-img-width + $cart-img-increase;
                 height: $cart-img-height + $cart-img-increase;
                 margin-left: $cart-img-margin-left - $cart-img-decrease-margin;
