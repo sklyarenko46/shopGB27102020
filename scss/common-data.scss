@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import "standart.scss";
+@import "normalize.scss";
 
 $content-width: 1140px;
 $logo-height: 59px;
@@ -26,14 +28,3 @@ $colour-fbfbfb: #fbfbfb;
 $box-shadow-5580: 5px 5px 8px 0 $colour-0000002b;
 $box-shadow-0580: 0 5px 8px 0 $colour-0000002b;
 $linear-gradient: linear-gradient(180.0deg, $colour-f9f9f9 0%, $colour-f5f5f5 100%);
-$search-box-height: 39px;
-$cart-img-width: 31px;
-$cart-img-height: 28px;
-$cart-img-margin-left: 20px;
-$cart-img-margin-right: 20px;
-$cart-img-increase: 2px;
-$cart-img-decrease-margin: $cart-img-increase / 2;
-$my-account-height: 38px;
-$top-header-nav-bar-height: 50px;
-$subscribe-input-mail: 46px;
-$footer-last-part-height: 79px;

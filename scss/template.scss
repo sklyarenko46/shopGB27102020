@@ -1,5 +1,17 @@
 @import "common-data.scss";
 
+$search-box-height: 39px;
+$cart-img-width: 31px;
+$cart-img-height: 28px;
+$cart-img-margin-left: 20px;
+$cart-img-margin-right: 20px;
+$cart-img-increase: 2px;
+$cart-img-decrease-margin: $cart-img-increase / 2;
+$my-account-height: 38px;
+$top-header-nav-bar-height: 50px;
+$subscribe-input-mail: 46px;
+$footer-last-part-height: 79px;
+
 body {
     font-family: 'Lato', sans-serif;
     background-color: white;
