@@ -1,1 +1,29 @@
-@import "template.scss";
+@import "bread-crumps-template.scss";
+
+$select-product-by-item-height: 37px;
+
+.main-content {
+  margin-bottom: 110px;
+  display: flex;
+  justify-content: space-between;
+  .select-product-by {
+      .select-product-by-item {
+        width: 237px;
+        height: $select-product-by-item-height;
+        font-size: 14px;
+        line-height: $select-product-by-item-height;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $colour-ef5b70;
+        box-sizing: border-box;
+        border-left: 5px solid $colour-ef5b70;
+        border-bottom: 1px solid $colour-ebebeb;
+        margin-bottom: 18px;
+        display: flex;
+        justify-content: space-between;
+        .select-product-by-item-title {
+            padding-left: 11px;
+        }
+      }
+  }
+}

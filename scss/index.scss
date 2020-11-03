@@ -4,6 +4,7 @@ $offer-big-img-height: 542px;
 $offer-small-img-height: 261px;
 $offer-width: $content-width / 2 - 10px;
 $bottom-banner-height: 529px;
+$browse-all-product-height: 48px;
 
 .top-banner {
     height: 614px;
@@ -84,36 +85,39 @@ $bottom-banner-height: 529px;
         .offer-left-top {
             height: $offer-big-img-height;
             background-image: url(../images/offer1.jpg);
+            background-size: cover;
         }
         .offer-left-bottom {
             height: $offer-small-img-height;
             background-image: url(../images/offer2.jpg);
+            background-size: cover;
         }
         .offer-right-top {
             height: $offer-small-img-height;
             background-image: url(../images/offer3.jpg);
+            background-size: cover;
         }
         .offer-right-bottom {
-            // height: 542px;
             height: $offer-big-img-height;
             background-image: url(../images/offer4.jpg);
+            background-size: cover;
         }
     }
     .featured-items {
-        .featured-items-title {
+        & > h2 {
             font-size: 30px;
             font-weight: 700;
             letter-spacing: 0.025em;
             color: $colour-222;
             text-align: center;
-        }
-        .featured-items-description {
-            margin-top: 10px;
-            font-size: 14px;
-            font-weight: 400;
-            letter-spacing: 0.025em;
-            color: $colour-9f9f9f;
-            text-align: center;
+            & + p {
+                margin-top: 10px;
+                font-size: 14px;
+                font-weight: 400;
+                letter-spacing: 0.025em;
+                color: $colour-9f9f9f;
+                text-align: center;
+            }
         }
         .featured-items-list {
             margin-top: 60px;
@@ -191,22 +195,28 @@ $bottom-banner-height: 529px;
     }
     .browse-all-product {
         width: 212px;
-        height: 48px;
+        height: $browse-all-product-height;
         background-color: $colour-f16d7f;
-        text-align: center;
         margin: 0 auto;
-        font-size: 16px;
-        line-height: 48px;
-        font-weight: 700;
-        letter-spacing: 0.025em;
-        color: white;
-        &:hover {
-            cursor: pointer;
-            background-color: $colour-cdcdcc;
-            background-image: $linear-gradient;
-            outline: 1px solid $colour-e6e6e6;
-            color: $colour-222;
+        text-align: center;
+        a {
+            display: block;
+            width: inherit;
+            height: inherit;
+            font-size: 16px;
+            line-height: $browse-all-product-height;
+            font-weight: 700;
+            letter-spacing: 0.025em;
+            color: white;
+            &:hover {
+                cursor: pointer;
+                background-color: $colour-cdcdcc;
+                background-image: $linear-gradient;
+                outline: 1px solid $colour-e6e6e6;
+                color: $colour-222;
+            }
         }
+        
     }
     .bottom-banner {
         height: $bottom-banner-height;

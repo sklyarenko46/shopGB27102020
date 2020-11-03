@@ -3,8 +3,6 @@
 $search-box-height: 39px;
 $cart-img-width: 31px;
 $cart-img-height: 28px;
-$cart-img-margin-left: 20px;
-$cart-img-margin-right: 20px;
 $cart-img-increase: 2px;
 $cart-img-decrease-margin: $cart-img-increase / 2;
 $my-account-height: 38px;
@@ -57,20 +55,22 @@ body {
         justify-content: space-between;
         align-items: center;
         .search-box {
+            // outline: 1px solid red;
+            width: 750px;
             height: $search-box-height;
             display: flex;
             align-items: center;
-            border: 1px solid $colour-e6e6e6;
-            border-radius: 3px 0px 0px 3px;
-            overflow: hidden;
+            // border: 1px solid $colour-e6e6e6;
+            // border-radius: 3px 0px 0px 3px;
+            // overflow: hidden;
             box-sizing: border-box;
-            margin-right: 320px;
-            margin-left: 37px;
+            margin-left: 46px;
             .browse {
                 width: 90px;
                 height: inherit;
                 text-align: center;
-                border-right: 1px solid $colour-e6e6e6;
+                border: 1px solid $colour-e6e6e6;
+                border-radius: 3px 0 0 3px;
                 box-sizing: border-box;
                 background-color: $colour-cdcdcc;
                 background-image: $linear-gradient;
@@ -89,16 +89,23 @@ body {
             .search-form {
                 height: inherit;
                 .search-input-field {
+                    border-top: 1px solid $colour-e6e6e6;
+                    border-bottom: 1px solid $colour-e6e6e6;
+                    border-left: 0;
+                    border-right: 0;
+                    border-radius: 0;
                     width: 280px;
                     height: inherit;
                     padding-left: 16px;
-                    border: none;
                     box-sizing: border-box;
                     line-height: $search-box-height;
                     font-size: 14px;
                     font-weight: 300;
                     letter-spacing: 0.025em;
                     color: $colour-a4a4a4;
+                    &:focus {
+                        border: 1px solid $colour-7a7a7a;
+                    }
                 }
                 .search-button {
                     width: 40px;
@@ -107,8 +114,8 @@ body {
                     font-weight: 400;
                     color: $colour-a4a4a4;
                     background-color: white;
-                    border: none;
-                    border-left: 1px solid $colour-e6e6e6;
+                    border: 1px solid $colour-e6e6e6;
+                    border-radius: 0 3px 3px 0;
                     box-sizing: border-box;
                     &:hover {
                         cursor: pointer;
@@ -125,14 +132,14 @@ body {
             background-position: center;
             width: $cart-img-width;
             height: $cart-img-height;
-            margin-left: $cart-img-margin-left;
-            margin-right: $cart-img-margin-right;
+            margin-left: $cart-img-increase;
+            margin-right: $cart-img-increase;
             &:hover {
                 background-size: $cart-img-width + $cart-img-increase;
                 width: $cart-img-width + $cart-img-increase;
                 height: $cart-img-height + $cart-img-increase;
-                margin-left: $cart-img-margin-left - $cart-img-decrease-margin;
-                margin-right: $cart-img-margin-right - $cart-img-decrease-margin;
+                margin-left: $cart-img-decrease-margin;
+                margin-right: $cart-img-decrease-margin;
             }
         }
         .my-account {
@@ -145,6 +152,7 @@ body {
             color: white;
             line-height: $my-account-height;
             text-align: center;
+            margin-left: 25px;
             &:hover {
                 cursor: pointer;
                 background-color: $colour-cdcdcc;
@@ -188,7 +196,7 @@ body {
         height: 440px;
         background: url(../images/subscribe.jpg) no-repeat;
         background-color: $colour-f2f2f280;
-        background-size: 1600px;
+        background-size: cover;
         background-position: center;
         background-blend-mode: color;
         .subscribe {
