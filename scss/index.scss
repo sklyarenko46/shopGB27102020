@@ -215,36 +215,36 @@ $bottom-banner-height: 529px;
         background-size: 767px;
         background-color: $colour-222;
         margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
         .bottom-banner-text {
             padding-top: 146px;
-            float: left;
-            p {
+            padding-left: 40px;
+            .bottom-banner-title {
                 font-weight: 700;
                 letter-spacing: 0.025em;
                 color: white;
-                padding-left: 40px;
-                &:first-child {
-                    font-size: 53.7px;
-                    .last-word {
-                        color: $colour-f16d7f;
-                    }
-                }
-                &:last-child {
-                    font-size: 32.2px;
+                font-size: 53.7px;
+                .last-word {
+                    color: $colour-f16d7f;
                 }
             }
+            .bottom-banner-description {
+                font-weight: 700;
+                letter-spacing: 0.025em;
+                color: white;
+                font-size: 32.2px;
+            }
         }
-        .bottom-banner-panel {
+        .bottom-banner-sidebar {
             width: 373px;
-            height: $bottom-banner-height - 40px;
-            float: right;
+            height: $bottom-banner-height;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
-            .bottom-banner-panel-item {
+            .bottom-banner-sidebar-item {
                 width: 250px;
-                height: 100px;
                 padding-left: 60px;
                 background-repeat: no-repeat;
                 background-size: 40px;

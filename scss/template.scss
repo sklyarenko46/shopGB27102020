@@ -11,6 +11,8 @@ $my-account-height: 38px;
 $top-header-nav-bar-height: 50px;
 $subscribe-input-mail: 46px;
 $footer-last-part-height: 79px;
+$subscribe-separator-width: 2px;
+$subscribe-part-width: ($content-width - $subscribe-separator-width) / 2;
 
 body {
     font-family: 'Lato', sans-serif;
@@ -193,12 +195,12 @@ body {
             display: flex;
             align-content: space-between;
             height: inherit;
-            .subscribe-part:first-child {
-                box-sizing: border-box;
-                border-right: 1px solid white;
+            .subscribe-separator {
+                width: $subscribe-separator-width;
+                background-color: white;
             }
             .subscribe-part {
-                width: 50%;
+                width: $subscribe-part-width;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -248,7 +250,7 @@ body {
                 }
                 .subscribe-form {
                     width: 386px;
-                    .subscribe-form-title {
+                    .subscribe-form-content {
                         color: $colour-222;
                         text-align: center;
                         font-weight: 500;
@@ -261,42 +263,42 @@ body {
                         p {
                             font-size: 17px;
                         }
-                    }
-                    .subscribe-input-mail {
-                        height: $subscribe-input-mail;
-                        background-color: $colour-e1e1e1;
-                        border-radius: 23px;
-                        overflow: hidden;
-                        margin-top: 35px;
-                        input {
-                            width: 70%;
-                            border: 0;
-                            background-color: inherit;
-                            box-sizing: border-box;
-                            padding: 0px 28px;
-                            opacity: 0.67;
-                            font-size: 14px;
-                            line-height: $subscribe-input-mail;
-                            font-weight: 400;
-                            letter-spacing: 0.025em;
-                            color: $colour-222;
-                            float: left;
-                        }
-                        button {
-                            width: 30%;
-                            background-color: $colour-f16d7f;
-                            border: none;
-                            font-size: 14px;
-                            line-height: $subscribe-input-mail;
-                            font-weight: 300;
-                            letter-spacing: 0.025em;
-                            color: white;
-                            &:hover {
-                                cursor: pointer;
-                                background-color: $colour-cdcdcc;
-                                background-image: $linear-gradient;
-                                outline: 1px solid $colour-e6e6e6;
+                        .subscribe-input-mail {
+                            height: $subscribe-input-mail;
+                            background-color: $colour-e1e1e1;
+                            border-radius: 23px;
+                            overflow: hidden;
+                            margin-top: 35px;
+                            input {
+                                width: 70%;
+                                border: 0;
+                                background-color: inherit;
+                                box-sizing: border-box;
+                                padding: 0px 28px;
+                                opacity: 0.67;
+                                font-size: 14px;
+                                line-height: $subscribe-input-mail;
+                                font-weight: 400;
+                                letter-spacing: 0.025em;
                                 color: $colour-222;
+                                float: left;
+                            }
+                            button {
+                                width: 30%;
+                                background-color: $colour-f16d7f;
+                                border: none;
+                                font-size: 14px;
+                                line-height: $subscribe-input-mail;
+                                font-weight: 300;
+                                letter-spacing: 0.025em;
+                                color: white;
+                                &:hover {
+                                    cursor: pointer;
+                                    background-color: $colour-cdcdcc;
+                                    background-image: $linear-gradient;
+                                    outline: 1px solid $colour-e6e6e6;
+                                    color: $colour-222;
+                                }
                             }
                         }
                     }
@@ -319,10 +321,7 @@ body {
                     margin-top: 29px;
                 }  
             }
-            .common-info-nav-bar-column {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+            .common-info-column {
                 h2 {
                     font-size: 18px;
                     font-weight: 700;
@@ -331,17 +330,20 @@ body {
                     padding-bottom: 30px;
                     padding-top: 10px;
                 }
-                a {
-                    font-size: 16px;
-                    font-weight: 400;
-                    letter-spacing: 0.025em;
-                    color: $colour-898989;
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    line-height: 45px;
-                    &:hover {
-                        color: $colour-f16d7f;
+                .common-info-nav {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    a {
+                        font-size: 16px;
+                        font-weight: 400;
+                        letter-spacing: 0.025em;
+                        color: $colour-898989;
+                        display: block;
+                        line-height: 45px;
+                        &:hover {
+                            color: $colour-f16d7f;
+                        }
                     }
                 }
             }
