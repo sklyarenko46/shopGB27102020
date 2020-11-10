@@ -1,5 +1,17 @@
 @import "common-data.scss";
 
+$search-box-height: 39px;
+$cart-img-width: 31px;
+$cart-img-height: 28px;
+$cart-img-increase: 2px;
+$cart-img-decrease-margin: $cart-img-increase / 2;
+$my-account-height: 38px;
+$top-header-nav-bar-height: 50px;
+$subscribe-input-mail: 46px;
+$footer-last-part-height: 79px;
+$subscribe-separator-width: 2px;
+$subscribe-part-width: ($content-width - $subscribe-separator-width) / 2;
+
 body {
     font-family: 'Lato', sans-serif;
     background-color: white;
@@ -43,20 +55,22 @@ body {
         justify-content: space-between;
         align-items: center;
         .search-box {
+            // outline: 1px solid red;
+            width: 750px;
             height: $search-box-height;
             display: flex;
             align-items: center;
-            border: 1px solid $colour-e6e6e6;
-            border-radius: 3px 0px 0px 3px;
-            overflow: hidden;
+            // border: 1px solid $colour-e6e6e6;
+            // border-radius: 3px 0px 0px 3px;
+            // overflow: hidden;
             box-sizing: border-box;
-            margin-right: 320px;
-            margin-left: 37px;
+            margin-left: 46px;
             .browse {
                 width: 90px;
                 height: inherit;
                 text-align: center;
-                border-right: 1px solid $colour-e6e6e6;
+                border: 1px solid $colour-e6e6e6;
+                border-radius: 3px 0 0 3px;
                 box-sizing: border-box;
                 background-color: $colour-cdcdcc;
                 background-image: $linear-gradient;
@@ -68,23 +82,30 @@ body {
                 &:hover {
                     cursor: pointer;
                     background-image: none;
-                    background-color: #f16d7f;
+                    background-color: $colour-f16d7f;
                     color: white;
                 }
             }
             .search-form {
                 height: inherit;
                 .search-input-field {
+                    border-top: 1px solid $colour-e6e6e6;
+                    border-bottom: 1px solid $colour-e6e6e6;
+                    border-left: 0;
+                    border-right: 0;
+                    border-radius: 0;
                     width: 280px;
                     height: inherit;
                     padding-left: 16px;
-                    border: none;
                     box-sizing: border-box;
                     line-height: $search-box-height;
                     font-size: 14px;
                     font-weight: 300;
                     letter-spacing: 0.025em;
                     color: $colour-a4a4a4;
+                    &:focus {
+                        border: 1px solid $colour-7a7a7a;
+                    }
                 }
                 .search-button {
                     width: 40px;
@@ -93,8 +114,8 @@ body {
                     font-weight: 400;
                     color: $colour-a4a4a4;
                     background-color: white;
-                    border: none;
-                    border-left: 1px solid $colour-e6e6e6;
+                    border: 1px solid $colour-e6e6e6;
+                    border-radius: 0 3px 3px 0;
                     box-sizing: border-box;
                     &:hover {
                         cursor: pointer;
@@ -104,16 +125,21 @@ body {
                 }
             }
         }
-        .cart-img {
+        .shopping-cart-link {
+            background-image: url(../images/cart.png);
+            background-repeat: no-repeat;
+            background-size: $cart-img-width;
+            background-position: center;
             width: $cart-img-width;
             height: $cart-img-height;
-            margin-left: $cart-img-margin-left;
-            margin-right: $cart-img-margin-right;
+            margin-left: $cart-img-increase;
+            margin-right: $cart-img-increase;
             &:hover {
+                background-size: $cart-img-width + $cart-img-increase;
                 width: $cart-img-width + $cart-img-increase;
                 height: $cart-img-height + $cart-img-increase;
-                margin-left: $cart-img-margin-left - $cart-img-decrease-margin;
-                margin-right: $cart-img-margin-right - $cart-img-decrease-margin;
+                margin-left: $cart-img-decrease-margin;
+                margin-right: $cart-img-decrease-margin;
             }
         }
         .my-account {
@@ -126,6 +152,7 @@ body {
             color: white;
             line-height: $my-account-height;
             text-align: center;
+            margin-left: 25px;
             &:hover {
                 cursor: pointer;
                 background-color: $colour-cdcdcc;
@@ -169,19 +196,19 @@ body {
         height: 440px;
         background: url(../images/subscribe.jpg) no-repeat;
         background-color: $colour-f2f2f280;
-        background-size: 1600px;
+        background-size: cover;
         background-position: center;
         background-blend-mode: color;
         .subscribe {
             display: flex;
             align-content: space-between;
             height: inherit;
-            .subscribe-part:first-child {
-                box-sizing: border-box;
-                border-right: 1px solid white;
+            .subscribe-separator {
+                width: $subscribe-separator-width;
+                background-color: white;
             }
             .subscribe-part {
-                width: 50%;
+                width: $subscribe-part-width;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -231,7 +258,7 @@ body {
                 }
                 .subscribe-form {
                     width: 386px;
-                    .subscribe-form-title {
+                    .subscribe-form-content {
                         color: $colour-222;
                         text-align: center;
                         font-weight: 500;
@@ -244,42 +271,42 @@ body {
                         p {
                             font-size: 17px;
                         }
-                    }
-                    .subscribe-input-mail {
-                        height: $subscribe-input-mail;
-                        background-color: $colour-e1e1e1;
-                        border-radius: 23px;
-                        overflow: hidden;
-                        margin-top: 35px;
-                        input {
-                            width: 70%;
-                            border: 0;
-                            background-color: inherit;
-                            box-sizing: border-box;
-                            padding: 0px 28px;
-                            opacity: 0.67;
-                            font-size: 14px;
-                            line-height: $subscribe-input-mail;
-                            font-weight: 400;
-                            letter-spacing: 0.025em;
-                            color: $colour-222;
-                            float: left;
-                        }
-                        button {
-                            width: 30%;
-                            background-color: $colour-f16d7f;
-                            border: none;
-                            font-size: 14px;
-                            line-height: $subscribe-input-mail;
-                            font-weight: 300;
-                            letter-spacing: 0.025em;
-                            color: white;
-                            &:hover {
-                                cursor: pointer;
-                                background-color: $colour-cdcdcc;
-                                background-image: $linear-gradient;
-                                outline: 1px solid $colour-e6e6e6;
+                        .subscribe-input-mail {
+                            height: $subscribe-input-mail;
+                            background-color: $colour-e1e1e1;
+                            border-radius: 23px;
+                            overflow: hidden;
+                            margin-top: 35px;
+                            input {
+                                width: 70%;
+                                border: 0;
+                                background-color: inherit;
+                                box-sizing: border-box;
+                                padding: 0px 28px;
+                                opacity: 0.67;
+                                font-size: 14px;
+                                line-height: $subscribe-input-mail;
+                                font-weight: 400;
+                                letter-spacing: 0.025em;
                                 color: $colour-222;
+                                float: left;
+                            }
+                            button {
+                                width: 30%;
+                                background-color: $colour-f16d7f;
+                                border: none;
+                                font-size: 14px;
+                                line-height: $subscribe-input-mail;
+                                font-weight: 300;
+                                letter-spacing: 0.025em;
+                                color: white;
+                                &:hover {
+                                    cursor: pointer;
+                                    background-color: $colour-cdcdcc;
+                                    background-image: $linear-gradient;
+                                    outline: 1px solid $colour-e6e6e6;
+                                    color: $colour-222;
+                                }
                             }
                         }
                     }
@@ -302,10 +329,7 @@ body {
                     margin-top: 29px;
                 }  
             }
-            .common-info-nav-bar-column {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+            .common-info-column {
                 h2 {
                     font-size: 18px;
                     font-weight: 700;
@@ -314,17 +338,20 @@ body {
                     padding-bottom: 30px;
                     padding-top: 10px;
                 }
-                a {
-                    font-size: 16px;
-                    font-weight: 400;
-                    letter-spacing: 0.025em;
-                    color: $colour-898989;
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    line-height: 45px;
-                    &:hover {
-                        color: $colour-f16d7f;
+                .common-info-nav {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    a {
+                        font-size: 16px;
+                        font-weight: 400;
+                        letter-spacing: 0.025em;
+                        color: $colour-898989;
+                        display: block;
+                        line-height: 45px;
+                        &:hover {
+                            color: $colour-f16d7f;
+                        }
                     }
                 }
             }

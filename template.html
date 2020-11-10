@@ -5,47 +5,42 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>TEMPLATE</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-        <link rel="stylesheet" href="../css/template.min.css">
-        <link rel="stylesheet" href="../css/normalize.min.css">
-        <link rel="stylesheet" href="../css/standart.min.css">
+        <link rel="stylesheet" href="css/template.min.css">
     </head>
     <body>
         <header class="top-header">
-            <div class="centring-content">
-                <div class="top-header-panel">
-                    <div class="logo">
-                        <a class = "logo-link" href="#">
-                            BRAN<span class="logo-link-last-letter">D</span>
-                        </a>
+            <div class="centring-content top-header-panel">
+                <div class="logo">
+                    <a class = "logo-link" href="index.html">
+                        BRAN<span class="logo-link-last-letter">D</span>
+                    </a>
+                </div>
+                <div class="search-box">
+                    <div class="browse">
+                        Browse <i class="fas fa-caret-down"></i>
                     </div>
-                    <div class="search-box">
-                        <div class="browse">
-                            Browse <i class="fas fa-caret-down"></i>
-                        </div>
-                        <form class="search-form">
-                            <input class="search-input-field" placeholder="Search for Item..." type="text"><button class="search-button" type="submit">
-                                <i class="fas fa-search"></i>
-                            </button> 
-                        </form>
-                    </div>
-                    <img class="cart-img" src="../images/cart.png" alt="">
-                    <div class="my-account">
-                        My Account <i class="fas fa-caret-down"></i>
-                    </div>
-                </div> 
+                    <form class="search-form">
+                        <input class="search-input-field" placeholder="Search for Item..." type="text"
+                        ><button class="search-button" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button> 
+                    </form>
+                </div>
+                <a href="shopping-cart.html" class="shopping-cart-link"></a>
+                <div class="my-account">
+                    My Account <i class="fas fa-caret-down"></i>
+                </div>
             </div>
             <div class="top-header-separator"></div>
-            <div class="centring-content">
-                <nav class="top-header-nav-bar">
-                    <a href="#" class="top-header-nav-bar-item">Home</a>
-                    <a href="#" class="top-header-nav-bar-item">Man</a>
-                    <a href="#" class="top-header-nav-bar-item">Women</a>
-                    <a href="#" class="top-header-nav-bar-item">Kids</a>
-                    <a href="#" class="top-header-nav-bar-item">Accoseriese</a>
-                    <a href="#" class="top-header-nav-bar-item">Featured</a>
-                    <a href="#" class="top-header-nav-bar-item">Hot Deals</a>
-                </nav>
-            </div>
+            <nav class="centring-content top-header-nav-bar">
+                <a href="#" class="top-header-nav-bar-item">Home</a>
+                <a href="#" class="top-header-nav-bar-item">Man</a>
+                <a href="#" class="top-header-nav-bar-item">Women</a>
+                <a href="#" class="top-header-nav-bar-item">Kids</a>
+                <a href="#" class="top-header-nav-bar-item">Accoseriese</a>
+                <a href="#" class="top-header-nav-bar-item">Featured</a>
+                <a href="#" class="top-header-nav-bar-item">Hot Deals</a>
+            </nav>
         </header>
         <main class="page-filler">
             
@@ -55,7 +50,7 @@
                 <div class="centring-content subscribe">
                     <div class="subscribe-part">
                         <div class="subscribe-info">
-                            <img class="subscriber-foto" src="../images/reviewPerson.png" alt="reviewPerson">
+                            <img class="subscriber-foto" src="images/reviewPerson.png" alt="reviewPerson">
                             <div class="subscribe-info-text">
                                 <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
                                 <p>Bin Burhan</p>
@@ -66,16 +61,17 @@
                             </div>
                         </div>
                     </div>
+                    <div class="subscribe-separator"></div>
                     <div class="subscribe-part">
                         <form class="subscribe-form">
-                            <section class="subscribe-form-title">
+                            <section class="subscribe-form-content">
                                 <h2>subscribe</h2>
                                 <p>FOR OUR NEWLETTER AND PROMOTION</p>
+                                <div class="subscribe-input-mail">
+                                    <input placeholder="Enter Your Email" type="text">
+                                    <button type="submit">Subscribe</button>
+                                </div>
                             </section>
-                            <div class="subscribe-input-mail">
-                                <input placeholder="Enter Your Email" type="text">
-                                <button type="submit">Subscribe</button>
-                            </div>
                         </form>
                     </div>
                 </div>
@@ -84,7 +80,7 @@
                 <div class="centring-content common-info">
                     <div class="brand-info">
                          <div class="logo">
-                            <a class = "logo-link" href="#">
+                            <a class = "logo-link" href="index.html">
                                 BRAN<span class="logo-link-last-letter">D</span>
                             </a>
                         </div>
@@ -92,29 +88,35 @@
                             Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.<br><br>Efficiently plagiarize 24/365 action items and focused infomediaries.<br>Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
                         </p>
                     </div> 
-                     <section class="common-info-nav-bar-column">
+                     <section class="common-info-column">
                         <h2>COMPANY</h2>
-                        <a href="#">Home</a>
-                        <a href="#">Shop</a>
-                        <a href="#">About</a>
-                        <a href="#">How It Works</a>
-                        <a href="#">Contact</a>
+                        <nav class="common-info-nav">
+                            <a href="#">Home</a>
+                            <a href="#">Shop</a>
+                            <a href="#">About</a>
+                            <a href="#">How It Works</a>
+                            <a href="#">Contact</a>
+                        </nav>
                     </section>
-                    <section class="common-info-nav-bar-column">
+                    <section class="common-info-column">
                         <h2>INFORMATION</h2>
-                        <a href="#">Tearms & Condition</a>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">How to Buy</a>
-                        <a href="#">How to Sell</a>
-                        <a href="#">Promotion</a>
+                        <nav class="common-info-nav">
+                            <a href="#">Tearms & Condition</a>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">How to Buy</a>
+                            <a href="#">How to Sell</a>
+                            <a href="#">Promotion</a>
+                        </nav>
                     </section>
-                    <section class="common-info-nav-bar-column">
+                    <section class="common-info-column">
                         <h2>SHOP CATEGORY</h2>
-                        <a href="#">Men</a>
-                        <a href="#">Women</a>
-                        <a href="#">Child</a>
-                        <a href="#">Apparel</a>
-                        <a href="#">Brows All</a>
+                        <nav class="common-info-nav">
+                            <a href="#">Men</a>
+                            <a href="#">Women</a>
+                            <a href="#">Child</a>
+                            <a href="#">Apparel</a>
+                            <a href="#">Brows All</a>
+                        </nav>
                     </section>
                 </div>
             </div>

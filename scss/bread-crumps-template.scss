@@ -1,0 +1,47 @@
+@import "template.scss";
+
+$top-bread-crumbs-height: 148px;
+.top-bread-crumbs {
+    width: 100%;
+    height: $top-bread-crumbs-height;
+    background-color: $colour-f8f3f4;
+    margin-bottom: 90px;
+    .top-bread-crumbs-content {
+        height: $top-bread-crumbs-height;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .last-point {
+            font-size: 24px;
+            line-height: 20px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: $colour-f16d7f;
+        }
+        .path {
+            display: flex;
+            justify-content: space-between;
+            .bread-crumb {
+                display: block;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 300;
+                text-transform: uppercase;
+                color: $colour-636363;
+                &:hover {
+                    color: $colour-f16d7f;
+                }
+                &:last-child {
+                    font-weight: 700;
+                    color: $colour-f16d7f;
+                    &::after {
+                        content: "";
+                    }
+                }
+                &::after {
+                    content: " / ";
+                }
+            }
+        }
+    }
+}
