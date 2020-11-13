@@ -1,4 +1,4 @@
-@import "common-data.scss";
+@import "__common-data.scss";
 
 $search-box-height: 39px;
 $cart-img-width: 31px;
@@ -55,35 +55,61 @@ body {
         justify-content: space-between;
         align-items: center;
         .search-box {
-            // outline: 1px solid red;
             width: 750px;
             height: $search-box-height;
             display: flex;
             align-items: center;
-            // border: 1px solid $colour-e6e6e6;
-            // border-radius: 3px 0px 0px 3px;
-            // overflow: hidden;
             box-sizing: border-box;
             margin-left: 46px;
             .browse {
                 width: 90px;
                 height: inherit;
-                text-align: center;
-                border: 1px solid $colour-e6e6e6;
-                border-radius: 3px 0 0 3px;
-                box-sizing: border-box;
-                background-color: $colour-cdcdcc;
-                background-image: $linear-gradient;
-                font-size: 14px;
-                font-weight: 300;
-                letter-spacing: 0.025em;
-                color: $colour-222;
-                line-height: $search-box-height;
-                &:hover {
-                    cursor: pointer;
-                    background-image: none;
-                    background-color: $colour-f16d7f;
-                    color: white;
+                &-button {
+                    width: inherit ;
+                    height: inherit;
+                    border: 1px solid $colour-e6e6e6;
+                    border-radius: 3px 0 0 3px;
+                    background-color: $colour-cdcdcc;
+                    background-image: $linear-gradient;
+                    font-size: 14px;
+                    font-weight: 300;
+                    letter-spacing: 0.025em;
+                    color: $colour-222;
+                    &:focus {
+                        box-shadow: none;
+                    }
+                    &:hover {
+                        background-image: none;
+                        background-color: $colour-f16d7f;
+                        color: white;
+                    }
+                }
+                .browse-menu {
+                    border: none;
+                    border-radius: 0;
+                    width: 210px;
+                    padding-left: 13px;
+                    &-separator {
+                        width: 70%;
+                        height: 1px;
+                        background-color: $colour-e8e8e8;
+                    }
+                    .browse-menu-item {
+                        color: $colour-232323;
+                        padding-left: 7px;
+                        letter-spacing: 0.025em;
+                        font-size: 14px;
+                        font-weight: 300;
+                    }
+                    .subtitle {
+                        font-size: 16px;
+                        font-weight: 400;
+                        padding-left: 0;
+                        text-transform: uppercase;
+                    }
+                    .subtitle:not(:first-child) {
+                        margin-top: 20px;
+                    }
                 }
             }
             .search-form {
@@ -145,20 +171,29 @@ body {
         .my-account {
             width: 130px;
             height: $my-account-height;
-            background-color: $colour-f16d7f;
-            font-size: 15px;
-            font-weight: 400;
-            letter-spacing: 0.025em;
-            color: white;
-            line-height: $my-account-height;
-            text-align: center;
             margin-left: 25px;
-            &:hover {
-                cursor: pointer;
-                background-color: $colour-cdcdcc;
-                background-image: $linear-gradient;
-                outline: 1px solid $colour-e6e6e6;
-                color: $colour-222;
+            &-button {
+                width: inherit ;
+                height: inherit;
+                border: none;
+                background-color: $colour-f16d7f;
+                font-size: 15px;
+                font-weight: 400;
+                letter-spacing: 0.025em;
+                color: white;
+                &:focus{
+                    box-shadow: none;
+                }
+                &:hover {
+                    background-color: $colour-cdcdcc;
+                    background-image: $linear-gradient;
+                    outline: 1px solid $colour-e6e6e6;
+                    color: $colour-222;
+                }
+            }
+            &-menu {
+                border: none;
+                border-radius: 0;
             }
         }
     }

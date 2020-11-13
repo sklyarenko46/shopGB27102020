@@ -1,4 +1,4 @@
-@import "bread-crumps-template.scss";
+@import "__bread-crumps-template.scss";
 
 $side-bar-header-height: 37px;
 $display-settings-box-height: 30px;
@@ -255,14 +255,12 @@ $max-toggle-left-position: $min-toggle-left-position + $range-width;
                 padding-left: 25px;
                 background-image: url(../images/addToCart.png);
                 background-size: 23px;
-                p {
-                  font-size: 13px;
-                  line-height: 39px;
-                  font-weight: 700;
-                  color: white;
-                  text-align: center;
-                  text-transform: none;
-                }
+                font-size: 13px;
+                line-height: 39px;
+                font-weight: 700;
+                color: white;
+                text-align: center;
+                text-transform: none;
               }
               .add-to-compare {
                 background-image: url(../images/compare.png);
@@ -288,6 +286,7 @@ $max-toggle-left-position: $min-toggle-left-position + $range-width;
                 box-sizing: border-box;
                 background-repeat: no-repeat;
                 background-position-y: center;
+                background-color: $colour-00000000;
                 &:hover {
                   background-color: $colour-f16d7f;
                 }
