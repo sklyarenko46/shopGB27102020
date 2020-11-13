@@ -172,18 +172,26 @@ $max-toggle-left-position: $min-toggle-left-position + $range-width;
         border-bottom: 1px solid $colour-ebebeb;
         border-left: 1px solid $colour-ebebeb;
         .value {
+          border: none;
           &:hover {
             cursor: pointer;
-            background-image: none;
-            background-color: $colour-f16d7f;
-            color: white;
-          }
-          i {
-            padding-left: 11%;
           }
         }
-        div {
-          width: 75px;
+        .parameter {
+          width: 73px;
+          text-align: center;
+        }
+        .value {
+          width: 100px;
+          background: url('../images/caret-down-solid.svg') no-repeat;
+          background-size: 9px;
+          background-position: 80px;
+          appearance: none;
+          padding-right: 20px;
+          text-align-last: center;
+        }
+        .parameter,
+        .value {
           height: inherit;
           background-color: white;
           border-right: 1px solid $colour-ebebeb;
@@ -191,8 +199,6 @@ $max-toggle-left-position: $min-toggle-left-position + $range-width;
           line-height: $display-settings-box-height;
           font-weight: 400;
           color: $colour-6f6e6e;
-          text-align: center;
-         
         }
       }
     }
