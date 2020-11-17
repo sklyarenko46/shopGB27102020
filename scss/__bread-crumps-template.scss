@@ -21,14 +21,22 @@ $top-bread-crumbs-height: 148px;
         .path {
             display: flex;
             justify-content: space-between;
+            .bread-crumb-separator {
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 300;
+                color: $colour-636363;
+            }
             .bread-crumb {
                 display: block;
                 font-size: 14px;
                 line-height: 20px;
                 font-weight: 300;
+                padding: 0 5px;
                 text-transform: uppercase;
                 color: $colour-636363;
-                &:hover {
+                transition: 0.3s;
+                &:hover  {
                     color: $colour-f16d7f;
                 }
                 &:last-child {
@@ -37,9 +45,6 @@ $top-bread-crumbs-height: 148px;
                     &::after {
                         content: "";
                     }
-                }
-                &::after {
-                    content: " / ";
                 }
             }
         }

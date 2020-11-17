@@ -34,6 +34,7 @@ $max-toggle-left-position: $min-toggle-left-position + $range-width;
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
+        transition: 0.4s;
         &:hover {
           cursor: pointer;
           box-shadow: $box-shadow-5580;
@@ -41,12 +42,15 @@ $max-toggle-left-position: $min-toggle-left-position + $range-width;
         }
       }
       .side-bar-item-content {
+        display: block;
         font-size: 14px;
         line-height: 33px;
         font-weight: 400;
         color: $colour-6f6e6e;
         padding-left: 17px;
+        transition: 0.4s;
         &:hover {
+          transform: translateX(5%);
           cursor: pointer;
           color: $colour-f16d7f;
         }
@@ -90,7 +94,11 @@ $max-toggle-left-position: $min-toggle-left-position + $range-width;
           .trend {
             justify-content: space-between;
             .variant {
+              background-color: white;
+              border: 0;
+              transition: 0.3s;
               &:hover {
+                transform: scale(1.15);
                 cursor: pointer;
                 color: $colour-f16d7f;
               }
@@ -105,9 +113,11 @@ $max-toggle-left-position: $min-toggle-left-position + $range-width;
             .variant {
               width: 50px;
               margin-right: 19px;
+              transition: 0.5s;
               &:hover {
                 cursor: pointer;
                 color: $colour-f16d7f;
+                font-weight: 900;
                 input {
                   cursor: inherit;
                 }
@@ -134,13 +144,17 @@ $max-toggle-left-position: $min-toggle-left-position + $range-width;
                 }
                 .toggle {
                   position: absolute;
+                  z-index: 1;
                   top: -($toggle-center-position);
                   width: $toggle-diameter;
                   height: $toggle-diameter;
                   border-radius: 50%;
                   background: $colour-f16d7f;
+                  transition: 0.5s;
                   &:hover {
                     cursor: pointer;
+                    border: 5px solid  $colour-f16d7f;
+                    background-color: white;
                   }
                 }
                 .toggle-min{
@@ -173,8 +187,19 @@ $max-toggle-left-position: $min-toggle-left-position + $range-width;
         border-left: 1px solid $colour-ebebeb;
         .value {
           border: none;
+          border-radius: 0;
+          transition: 0.3s;
+          box-sizing: border-box;
           &:hover {
             cursor: pointer;
+            background-color: $colour-f16d7f;
+            color: white;
+            background-image: url('../images/arrow_down-white.png');
+          }
+          option {
+            transition: 0.3s;
+            background-color: white;
+            color: $colour-6f6e6e;
           }
         }
         .parameter {
@@ -183,7 +208,7 @@ $max-toggle-left-position: $min-toggle-left-position + $range-width;
         }
         .value {
           width: 100px;
-          background: url('../images/caret-down-solid.svg') no-repeat;
+          background: url('../images/arrow_down.png') no-repeat;
           background-size: 9px;
           background-position: 80px;
           appearance: none;
@@ -214,7 +239,7 @@ $max-toggle-left-position: $min-toggle-left-position + $range-width;
         height: 364px;
         margin-bottom: 40px;
         &:hover .product-buy{
-            display: block;
+            opacity: 1;
             cursor: pointer;
         }
         & > img {
@@ -241,8 +266,9 @@ $max-toggle-left-position: $min-toggle-left-position + $range-width;
           position: absolute;
           width: inherit;
           height: inherit;
-          display: none;
+          opacity: 0;
           box-shadow: $box-shadow-0580;
+          transition: 0.4s;
           .product-buy-blackout {
             width: inherit;
             height: 280px;
@@ -292,8 +318,9 @@ $max-toggle-left-position: $min-toggle-left-position + $range-width;
                 box-sizing: border-box;
                 background-repeat: no-repeat;
                 background-position-y: center;
-                background-color: $colour-00000000;
+                transition: 0.3s;
                 &:hover {
+                  transform: scale(1.1);
                   background-color: $colour-f16d7f;
                 }
               }
@@ -320,9 +347,16 @@ $max-toggle-left-position: $min-toggle-left-position + $range-width;
           font-weight: 300;
           color: $colour-c4c4c4;
         }
-        a {
+        button {
+          transition: 0.3s;
           &:hover {
             color:$colour-ef5b70;
+            font-weight: 900;
+          }
+        }
+        .previous, .next {
+          &:hover {
+            transform: scale(1.1);
           }
         }
       }
@@ -336,6 +370,7 @@ $max-toggle-left-position: $min-toggle-left-position + $range-width;
         line-height: $pagination-height;
         font-weight: 500;
         color: $colour-ef5b70;
+        transition: 0.3s;
         &:hover {
           background-color: $colour-ef5b70;
           color: white;

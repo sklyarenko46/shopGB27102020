@@ -6,6 +6,13 @@
 *:focus {
   outline: none;
 }
+button {
+  background-color: #00000000;
+  border: 0;
+  &:focus {
+    outline: none;
+  }
+}
 html,
 body {
   height: 100%;
