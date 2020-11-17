@@ -43,7 +43,7 @@ $browse-all-product-height: 48px;
 .main-content {
     padding: 100px 0;
     .recommendations {
-        height: 823px;
+        height: 838px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -179,13 +179,15 @@ $browse-all-product-height: 48px;
                             background-size: 23px;
                             background-position-y: center;
                             background-position-x: 10%;
-                            p {
-                                font-size: 13px;
-                                line-height: 39px;
-                                font-weight: 700;
-                                color: white;
-                                text-align: center;
-                                text-transform: none;
+                            font-size: 13px;
+                            line-height: 39px;
+                            font-weight: 700;
+                            color: white;
+                            text-align: center;
+                            text-transform: none;
+                            background-color: $colour-00000000;
+                            &:hover {
+                                background-color: $colour-f16d7f;
                             }
                         }
                     }
