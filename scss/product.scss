@@ -176,7 +176,6 @@ $max-toggle-left-position: $min-toggle-left-position + $range-width;
       background-color: $colour-f3f3f3;
       display: flex;
       align-items: center;
-      box-sizing: border-box;
       padding-left: 10px;
       .display-settings-box {
         height: $display-settings-box-height;
@@ -189,7 +188,6 @@ $max-toggle-left-position: $min-toggle-left-position + $range-width;
           border: none;
           border-radius: 0;
           transition: 0.3s;
-          box-sizing: border-box;
           &:hover {
             cursor: pointer;
             background-color: $colour-f16d7f;
@@ -315,7 +313,6 @@ $max-toggle-left-position: $min-toggle-left-position + $range-width;
               .product-buy-blackout-button {
                 border: 1px solid white;
                 border-radius: 5px;
-                box-sizing: border-box;
                 background-repeat: no-repeat;
                 background-position-y: center;
                 transition: 0.3s;
