@@ -3,8 +3,6 @@
 $search-box-height: 39px;
 $cart-img-width: 31px;
 $cart-img-height: 28px;
-$cart-img-increase: 2px;
-$cart-img-decrease-margin: $cart-img-increase / 2;
 $my-account-height: 38px;
 $top-header-nav-bar-height: 50px;
 $subscribe-input-mail: 46px;
@@ -62,53 +60,71 @@ body {
             box-sizing: border-box;
             margin-left: 46px;
             .browse {
+                position: relative;
                 width: 90px;
                 height: inherit;
-                &-button {
+                .browse-button {
+                    transition: 0.3s;
                     width: inherit ;
                     height: inherit;
                     border: 1px solid $colour-e6e6e6;
                     border-radius: 3px 0 0 3px;
                     background-color: $colour-cdcdcc;
                     background-image: $linear-gradient;
-                    font-size: 14px;
-                    font-weight: 300;
-                    letter-spacing: 0.025em;
-                    color: $colour-222;
-                    &:focus {
-                        box-shadow: none;
+                    .text {
+                        font-size: 14px;
+                        font-weight: 300;
+                        letter-spacing: 0.025em;
+                        color: $colour-222;
+                        i {
+                            padding-left: 10px;
+                        }
                     }
                     &:hover {
                         background-image: none;
                         background-color: $colour-f16d7f;
-                        color: white;
+                        & + .browse-menu {
+                            display: block;
+                        }
+                        .text {
+                            color: white;
+                        }
                     }
                 }
                 .browse-menu {
-                    border: none;
+                    position: absolute;
+                    display: none;
+                    transition: 0.3s;
                     border-radius: 0;
                     width: 210px;
                     padding-left: 13px;
-                    &-separator {
+                    background-color: white;
+                    border-radius: 5px;
+                    border: 1px solid $colour-e6e6e6;
+                    .browse-menu-separator {
                         width: 70%;
                         height: 1px;
+                        margin: 10px 0;
                         background-color: $colour-e8e8e8;
                     }
                     .browse-menu-item {
+                        display: block;
                         color: $colour-232323;
                         padding-left: 7px;
                         letter-spacing: 0.025em;
                         font-size: 14px;
                         font-weight: 300;
+                        line-height: 25px;
                     }
                     .subtitle {
                         font-size: 16px;
                         font-weight: 400;
                         padding-left: 0;
                         text-transform: uppercase;
+                        padding-top: 10px;
                     }
                     .subtitle:not(:first-child) {
-                        margin-top: 20px;
+                        padding-top: 20px;
                     }
                 }
             }
@@ -143,6 +159,7 @@ body {
                     border: 1px solid $colour-e6e6e6;
                     border-radius: 0 3px 3px 0;
                     box-sizing: border-box;
+                    transition: 0.3s;
                     &:hover {
                         cursor: pointer;
                         background-color: #f16d7f;
@@ -158,40 +175,39 @@ body {
             background-position: center;
             width: $cart-img-width;
             height: $cart-img-height;
-            margin-left: $cart-img-increase;
-            margin-right: $cart-img-increase;
+            transition: 0.3s;
             &:hover {
-                background-size: $cart-img-width + $cart-img-increase;
-                width: $cart-img-width + $cart-img-increase;
-                height: $cart-img-height + $cart-img-increase;
-                margin-left: $cart-img-decrease-margin;
-                margin-right: $cart-img-decrease-margin;
+                transform: scale(1.1);
             }
         }
         .my-account {
             width: 130px;
             height: $my-account-height;
             margin-left: 25px;
-            &-button {
+            .my-account-button {
                 width: inherit ;
                 height: inherit;
-                border: none;
                 background-color: $colour-f16d7f;
-                font-size: 15px;
-                font-weight: 400;
-                letter-spacing: 0.025em;
-                color: white;
-                &:focus{
-                    box-shadow: none;
+                border: 1px solid white;
+                transition: 0.3s;
+                .text {
+                    font-size: 15px;
+                    font-weight: 400;
+                    letter-spacing: 0.025em;
+                    color: white;
+                    i {
+                        padding: 10px;
+                    }
                 }
                 &:hover {
-                    background-color: $colour-cdcdcc;
-                    background-image: $linear-gradient;
-                    outline: 1px solid $colour-e6e6e6;
-                    color: $colour-222;
+                    background-color: white;
+                    border: 1px solid $colour-f16d7f;
+                    .text {
+                         color: $colour-f16d7f;
+                    }
                 }
             }
-            &-menu {
+            .my-account-menu {
                 border: none;
                 border-radius: 0;
             }
@@ -209,17 +225,20 @@ body {
     padding: 0 230px;
     box-sizing: border-box;
     .top-header-nav-bar-item {
-        display: block;
-        text-align: center;
-        font-size: 14px;
-        line-height: $top-header-nav-bar-height;
-        font-weight: 900;
-        text-transform: uppercase;
-        color: $colour-222;
         box-sizing: border-box;
-        &:hover {
-            color: $colour-f16d7f;
-            border-bottom: 3px solid $colour-f16d7f;
+        a {
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            line-height: $top-header-nav-bar-height;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: $colour-222;
+            transition: 0.4s;
+            &:hover{
+                transform: scale(1.25);
+                color: $colour-f16d7f;
+            }
         }
     }
 }
@@ -284,7 +303,9 @@ body {
                             float: left;
                             margin-top: 41px;
                             margin-right: 13px;
+                            transition: 0.4s;
                             &:hover {
+                                transform: scale(1.25);
                                 cursor: pointer;
                                 background-color: $colour-f16d7f;
                             }
@@ -328,19 +349,20 @@ body {
                             }
                             button {
                                 width: 30%;
+                                height: inherit;
                                 background-color: $colour-f16d7f;
-                                border: none;
+                                border: 1px solid $colour-f16d7f;
+                                border-radius:   0 23px 23px 0;
                                 font-size: 14px;
                                 line-height: $subscribe-input-mail;
                                 font-weight: 300;
                                 letter-spacing: 0.025em;
                                 color: white;
+                                transition: 0.3s;
+                                box-sizing: border-box;
                                 &:hover {
-                                    cursor: pointer;
-                                    background-color: $colour-cdcdcc;
-                                    background-image: $linear-gradient;
-                                    outline: 1px solid $colour-e6e6e6;
-                                    color: $colour-222;
+                                    background-color: white;
+                                    color: $colour-f16d7f;
                                 }
                             }
                         }
@@ -384,7 +406,9 @@ body {
                         color: $colour-898989;
                         display: block;
                         line-height: 45px;
+                        transition: 0.3s;
                         &:hover {
+                            transform: translateX(5%);
                             color: $colour-f16d7f;
                         }
                     }
@@ -416,6 +440,7 @@ body {
                 height: 32px;
                 background-color: white;
                 text-align: center;
+                transition: 0.6s;
                 &:hover {
                     cursor: pointer;
                     background-color: $colour-f16d7f;

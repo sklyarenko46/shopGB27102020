@@ -5,6 +5,7 @@ $offer-small-img-height: 261px;
 $offer-width: $content-width / 2 - 10px;
 $bottom-banner-height: 529px;
 $browse-all-product-height: 48px;
+$product-img-height: 280px;
 
 .top-banner {
     height: 614px;
@@ -53,13 +54,6 @@ $browse-all-product-height: 48px;
         .offer {
             position: relative;
             width: $offer-width;
-            &:hover{
-                cursor: pointer;
-                box-shadow: $box-shadow-5580;
-                .offer-label{
-                    box-shadow: $box-shadow-5580;
-                }
-            }
             .offer-label {
                 position: absolute;
                 top: 26px;
@@ -132,12 +126,12 @@ $browse-all-product-height: 48px;
                 height: 370px;
                 margin-bottom: 40px;
                 &:hover .featured-item-buy{
-                    display: block;
+                    opacity: 1;
                     cursor: pointer;
                 }
-                & > img {
+                .product-img {
                     width: inherit;
-                    height: 280px;
+                    height: $product-img-height;
                 }
                 & > p {
                     max-height: 40px;
@@ -159,11 +153,12 @@ $browse-all-product-height: 48px;
                     position: absolute;
                     width: inherit;
                     height: inherit;
-                    display: none;
+                    opacity: 0;
                     box-shadow: $box-shadow-0580;
+                    transition: 0.5s;
                     .featured-item-buy-blackout {
                         width: inherit;
-                        height: 280px;
+                        height: $product-img-height;
                         background: $colour-00000080;
                         display: flex;
                         justify-content: center;
@@ -186,8 +181,13 @@ $browse-all-product-height: 48px;
                             text-align: center;
                             text-transform: none;
                             background-color: $colour-00000000;
+                            transition: 0.5s;
                             &:hover {
+                                transform: scale(1.15);
                                 background-color: $colour-f16d7f;
+                            }
+                            &:focus {
+                                outline: none;
                             }
                         }
                     }
@@ -210,12 +210,12 @@ $browse-all-product-height: 48px;
             font-weight: 700;
             letter-spacing: 0.025em;
             color: white;
+            transition: 0.3s;
             &:hover {
                 cursor: pointer;
-                background-color: $colour-cdcdcc;
-                background-image: $linear-gradient;
-                outline: 1px solid $colour-e6e6e6;
-                color: $colour-222;
+                background-color: white;
+                outline: 1px solid $colour-f16d7f;
+                color: $colour-f16d7f;
             }
         }
         
