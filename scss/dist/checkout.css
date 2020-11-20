@@ -833,3 +833,87 @@ body {
   line-height: 32px;
   color: #b2b2b2;
 }
+
+.top-bread-crumbs {
+  width: 100%;
+  height: 148px;
+  background-color: #f8f3f4;
+  margin-bottom: 90px;
+}
+.top-bread-crumbs .top-bread-crumbs-content {
+  height: 148px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-bread-crumbs .top-bread-crumbs-content .last-point {
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #f16d7f;
+}
+.top-bread-crumbs .top-bread-crumbs-content .path {
+  display: flex;
+  justify-content: space-between;
+}
+.top-bread-crumbs .top-bread-crumbs-content .path .bread-crumb-separator {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #636363;
+}
+.top-bread-crumbs .top-bread-crumbs-content .path .bread-crumb {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  padding: 0 5px;
+  text-transform: uppercase;
+  color: #636363;
+  transition: 0.3s;
+}
+.top-bread-crumbs .top-bread-crumbs-content .path .bread-crumb:hover {
+  color: #f16d7f;
+}
+.top-bread-crumbs .top-bread-crumbs-content .path .bread-crumb:last-child {
+  font-weight: 700;
+  color: #f16d7f;
+}
+.top-bread-crumbs .top-bread-crumbs-content .path .bread-crumb:last-child::after {
+  content: "";
+}
+
+.page-filler-content {
+  margin-bottom: 90px;
+}
+.page-filler-content .step .step-header {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222;
+}
+.page-filler-content .step .step-header::-webkit-details-marker {
+  display: none;
+}
+.page-filler-content .step .step-content {
+  margin: 40px 166px 40px 35px;
+}
+.page-filler-content .step .shipping-address {
+  display: flex;
+  justify-content: space-between;
+}
+.page-filler-content .step .shipping-address .shipping-address-column h2 {
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #222;
+  margin-bottom: 15px;
+}
+.page-filler-content .step-separator {
+  margin: 30px 0;
+  height: 1px;
+  background-color: #e8e8e8;
+}
