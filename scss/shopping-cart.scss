@@ -222,7 +222,8 @@ $checkout-button-height: 50px;
                 padding-right: 43px;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: space-around;
+                padding: 37px 0;
                 p {
                     text-align: right;
                     line-height: 1.2;
@@ -249,7 +250,6 @@ $checkout-button-height: 50px;
                     height: 1px;
                     background-color: $colour-e2e2e2;
                     align-self: flex-end;
-                    margin-bottom: 17px;
                 }
                 .checkout-button {
                     display: block;

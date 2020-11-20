@@ -90,6 +90,7 @@ body {
                 .browse-menu {
                     position: absolute;
                     display: none;
+                    z-index: 2;
                     transition: 0.3s;
                     border-radius: 0;
                     width: 210px;
@@ -174,22 +175,109 @@ body {
                 }
             }
         }
-        .shopping-cart-link {
-            background-image: url(../images/cart.png);
-            background-repeat: no-repeat;
-            background-size: $cart-img-width;
-            background-position: center;
-            width: $cart-img-width;
-            height: $cart-img-height;
+        .cart {
+            position: relative;
+            min-width: 100px;
+            min-height: 100px;
             transition: 0.3s;
+            .shopping-cart-link {
+                display: block;
+                min-width: inherit;
+                min-height: inherit;
+                line-height: 100px;
+                background-image: url(../images/cart.png);
+                background-size: 26px;
+                background-repeat: no-repeat;
+                background-position: center;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
             &:hover {
-                transform: scale(1.1);
+                cursor: pointer;
+                .cart-menu {
+                    display: block;
+                }
+            }
+            .cart-menu {
+                position: absolute;
+                display: none;
+                z-index: 2;
+                top: 100px;
+                width: 270px;
+                background-color: white;
+                border-radius: 5px;
+                padding: 17px;
+                .product {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 17px 0;
+                    img {
+                        width: 72px;
+                        height: 85px;
+                        background-color: $colour-ececec;
+                        margin-right: 10px;
+                    }
+                    .info {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .header {
+                            font-size: 12px;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            color: $colour-222;
+                        }
+                        .rating {
+                            i {
+                                color: #e4af48;
+                            }
+                        }
+                        .price {
+                            font-size: 13px;
+                            font-weight: 400;
+                            text-transform: uppercase;
+                            color: $colour-f16d7f;
+                        } 
+                    }
+                    .cart-delete-button {
+                        &:hover {
+                            cursor: pointer;
+                            color: $colour-f16d7f;
+                        }
+                    }
+                }
+                .total {
+                    font-size: 16px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: $colour-222; 
+                    display: flex;
+                    justify-content: space-between;
+                    margin:  37px 0;
+                }
+                .cart-menu-button {
+                    width: 225px;
+                    height: 50px;
+                    background-color:white;
+                    border: 1px solid $colour-eaeaea;
+                    margin-bottom: 11px;
+                    font-size: 14px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: $colour-4a4a4a;
+                    transition: 0.3s;
+                    &:hover {
+                        cursor: pointer;
+                        border: 1px solid $colour-f16d7f;
+                        color: $colour-f16d7f;
+                    }
+                }
             }
         }
         .my-account {
             width: 130px;
             height: $my-account-height;
-            margin-left: 25px;
             .my-account-button {
                 width: inherit ;
                 height: inherit;
