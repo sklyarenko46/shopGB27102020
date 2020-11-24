@@ -1,4 +1,4 @@
-@import "template.scss";
+@import "__template.scss";
 
 $offer-big-img-height: 542px;
 $offer-small-img-height: 261px;
@@ -167,7 +167,6 @@ $product-img-height: 280px;
                             width: 123px;
                             height: 39px;
                             border: 1px solid white;
-                            box-sizing: border-box;
                             padding-left: 25px;
                             background-image: url(../images/addToCart.png);
                             background-repeat: no-repeat;
